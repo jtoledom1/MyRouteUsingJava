@@ -1,12 +1,13 @@
 package Package;
 
+import java.util.Iterator;
 import java.util.Random;
 
 public class CiclosRepeticionEjercicios {
 
 	public static void main(String[] args) {
 		// ejerciciosBasicos();
-		ejerciciosIntermedios();
+		// ejerciciosIntermedios();
 		ejerciciosAvanzados();
 	}
 
@@ -96,11 +97,11 @@ public class CiclosRepeticionEjercicios {
 		System.out.println("\n3. Combina while y for: mientras no haya llegado el profesor\n");
 		while (!llegoProfe) {
 			for (int i = 0; i < 5; i++) {
-				System.out.println("No he llegado");
+				System.out.println("Profesor no ha llegado");
 				System.out.println("Los alumnos siguen haciendo ejercicios");
 				if (i == 4) {
 					llegoProfe = true;
-					System.out.println("Ya llegué");
+					System.out.println("Profesor ha llegado");
 				}
 			}
 		}
@@ -108,10 +109,10 @@ public class CiclosRepeticionEjercicios {
 		// 4. Crea un while infinito que se rompa cuando un número aleatorio sea mayor
 		// que 90
 
-		while (numInfinito != 100) {
-			numInfinito = (int)(Math.random() * 105);
-			System.out.println(numInfinito);
+		while (numInfinito <= 90) {
+			numInfinito = (int) (Math.random() * 105);
 		}
+		System.out.println("\n4. Crea un while infinito que se rompa cuando un número aleatorio sea mayor que 90\n");
 		System.out.println(numInfinito);
 	}
 
@@ -120,15 +121,57 @@ public class CiclosRepeticionEjercicios {
 
 		// 1. Anidación: Imprime tablas de multiplicar del 1 al 5 (1x1=1, 1x2=2...)
 
+		System.out.println("\n1. Anidación: Imprime tablas de multiplicar del 1 al 5 (1x1=1, 1x2=2...)\n");
+
+		for (int i = 1; i <= 5; i++) {
+			System.out.println("\n" + i + "\n");
+			for (int o = 1; o <= 10; o++) {
+				System.out.println(o + " x " + i + "=" + o * i);
+			}
+		}
+
 		// 2. Usa break para encontrar el primer número divisible entre 7 y 9 entre
 		// 1-1000
-
+		System.out.println("\n2. Usa break para encontrar el primer número divisible entre 7 y 9 entre 1-1000\n");
+		for(int i = 1; i <= 1000; i++) {
+			double modSiete = 0;
+			double modNueve = 0;
+			modNueve = i % 9;
+			modSiete = i % 7;
+			if (modNueve==0&&modSiete==0) {
+				System.out.println("El primer número divisible entre 7 y 9 es: "+i);
+				break;
+			}
+			
+		}
 		// 3. Crea un reloj digital (horas:minutos) usando dos for anidados
 		// (para horas 0-23 y minutos 0-59)
+		for (int i = 0; i <= 23; i++) {
+			for (int o = 0; o <= 59; o++) {
+				System.out.print(i);
+				System.out.print(":"+o+"\n");				
+			}
+		}
+		// 4. Simula un buscaminas: matriz 5x5 donde un break sale al encontrar "mina" (número 9)
+		System.out.println("\n4. Simula un buscaminas: matriz 5x5 donde un break sale al encontrar \"mina\" (número 9)\n");
+		boolean minaEncontrada = false;
 
-		// 4. Simula un buscaminas: matriz 5x5 donde un break sale al encontrar "mina"
-		// (número 9)
+        for (int i = 1; i <= 5 && !minaEncontrada; i++) {
+            System.out.println(i);
+            for (int o = 1; o <= 5; o++) {
+                System.out.print("     " + o + "= ");
+                
+                int multipMatriz = i * o;
+                System.out.println(multipMatriz);
 
+                if (multipMatriz == 9) {
+                    System.out.println("Mina encontrada en " + i + "x" + o + " = 9!");
+                    minaEncontrada = true;
+                    break;
+                }
+            }
+        }
+        //TODO---
 		// 5. Crea un menú con while + switch-case que permita elegir entre los
 		// ejercicios anteriores
 	}
