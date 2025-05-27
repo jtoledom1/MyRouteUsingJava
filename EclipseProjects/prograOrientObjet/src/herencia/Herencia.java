@@ -24,6 +24,7 @@ public class Herencia {
 		
 		perso = consu;
 		// consu = perso; 		/*Estaa línea daría error porque el superclass es Persona*/
+		System.out.println();
 		
 	}
 
