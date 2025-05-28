@@ -10,5 +10,5 @@ public class PruebaCapas {
 		panta.setVisible(true);				/*Llamar a que se muestre la pantalla*/
 		panta.setLocationRelativeTo(null);	/*Ponerla en medio*/
 		
-	
+	}
 }
