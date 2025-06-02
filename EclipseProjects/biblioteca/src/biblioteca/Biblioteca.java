@@ -22,19 +22,18 @@ import java.util.Scanner;
 public class Biblioteca {
 
 	private ArrayList<Libro> catalogo;
+	
 	Scanner scanner = new Scanner(System.in);
 	
 	/*Constructor*/
-	private Biblioteca() {this.catalogo = new ArrayList<Libro>();}
+	public Biblioteca() {this.catalogo = new ArrayList<Libro>();}
 
 	/*Métodos personalizados*/
-	public void agregarLibro(Libro libro) {
-		catalogo.add(libro);
-	}
+	public void agregarLibro(Libro libro) {catalogo.add(libro);}
 
 	public void mostrarCatalogo() {
 		for (Libro l : catalogo) {
-			l.toString();
+			System.out.println(l.toString());
 		}
 	}
 

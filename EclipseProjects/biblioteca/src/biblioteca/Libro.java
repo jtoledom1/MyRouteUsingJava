@@ -9,10 +9,24 @@ public abstract class Libro {
 	protected int anioPublicacion;
 	protected boolean disponible;
 	
+	/*---------- Constructor ----------*/
+	
+	public Libro() {}	
+	
+	public Libro(String titulo, String autor, int anioPublicacion, boolean disponible) {
+		super();
+		this.titulo = titulo;
+		this.autor = autor;
+		this.anioPublicacion = anioPublicacion;
+		this.disponible = disponible;
+	}
+	
+
 	/*---------- Métodos abstractos ----------*/
 	@Override
 	public abstract String toString();
 	
+
 	/*---------- Métodos personalizados ----------*/
 	protected void prestar() {setDisponible(false);}
 	protected void devolver() {setDisponible(true);}
