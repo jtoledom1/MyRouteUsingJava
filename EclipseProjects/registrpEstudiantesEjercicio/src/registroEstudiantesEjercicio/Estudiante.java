@@ -6,7 +6,7 @@ public class Estudiante {
 	private String nombre;
 	private int edad;
 	private double calificacion;
-
+	Scanner scanner = new Scanner(System.in);
 	public Estudiante() {
 
 	}
@@ -33,7 +33,7 @@ public class Estudiante {
 		this.edad = edad;
 	}
 
-	private double getCalificacion() {
+	public double getCalificacion() {
 		return calificacion;
 	}
 
@@ -51,7 +51,7 @@ public class Estudiante {
 
 	}
 	public void pedirDatos() {
-		Scanner scanner = new Scanner(System.in);
+		
 		boolean bandera = false;
 		boolean bandera1 = false;
 		

@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /*Los pasos consisten en:
  * 
- * Declarar el Array dentrop de la clase
+ * Declarar el Array dentro de la clase
  * inicializar el Array desde el constructor de la clase
  * Desde los métodos trabajar con el array, remove, add.
  * 

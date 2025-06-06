@@ -29,7 +29,7 @@ public class ciclosRepetición {
 		int tacosProbados = 0;
 
 		while (!llegoElCamion) {
-			i = ++i;
+			i =++i;
 			System.out.println(i + " Siguiendo esperando...");
 			if (i == 10) {
 				llegoElCamion = true;

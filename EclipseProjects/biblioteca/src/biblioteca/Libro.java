@@ -21,16 +21,10 @@ public abstract class Libro {
 		this.disponible = disponible;
 	}
 	
-
 	/*---------- Métodos abstractos ----------*/
 	@Override
 	public abstract String toString();
 	
-
-	/*---------- Métodos personalizados ----------*/
-	protected void prestar() {setDisponible(false);}
-	protected void devolver() {setDisponible(true);}
-
 	/*---------- Getters ----------*/
 	protected String getTitulo() {return titulo;}
 	protected String getAutor() {return autor;}
@@ -43,5 +37,8 @@ public abstract class Libro {
 	protected void setAnioPublicacion(int anioPublicacion) {this.anioPublicacion = anioPublicacion;}
 	protected void setDisponible(boolean disponible) {this.disponible = disponible;}
 	
+	/*---------- Métodos personalizados ----------*/
+	protected void prestar() {setDisponible(false);}
+	protected void devolver() {setDisponible(true);}
 
 }
